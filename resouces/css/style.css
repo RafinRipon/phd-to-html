@@ -1,0 +1,651 @@
+/*======google fonts======*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3;
+    font-size: 1.6rem;
+    
+}
+ul li{
+    list-style-type: none;
+}
+
+/*=========HEADING=======================*/
+h1{
+    color: #fff;
+    font-size: 4.2rem;
+
+}
+
+:focus{
+    outline: 0;
+}
+
+
+/*==========REUSABLE COMPONENTS============*/
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+section{
+    padding: 8rem 0;
+}
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    background: #fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+
+h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+
+
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+/*-----paragraph------*/
+
+.title-description{
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 3rem;
+
+}
+/*-----------BUTTON-----------------*/
+.btn:link,
+.btn:visited,
+.btn {
+    background: #333;
+    border-bottom: .3rem solid #000;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+    font-size: 1.6rem;
+    
+}
+
+
+/*=============HEADER SECTION==============*/
+
+header{
+   background:linear-gradient(rgba(49, 14, 131, 0.8),rgba(93, 26, 26, 0.8)), url(../img/bckgnd2.jpg);
+    height: 85vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo{
+    height: 3.6rem;
+    width: auto;
+    margin-top: 3.5rem;
+    float: left;
+}
+
+.hero-text-box{
+    width: 114rem;
+}
+
+/*----------main-nav---------------*/
+.main-nav{
+    float: right;
+    margin-top: 4rem;
+}
+
+.main-nav li:first-child{
+    margin-left: 0;
+}
+
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 1rem;
+    
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    padding: .6rem 1.6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background: #643a79;
+    
+}
+
+.main-nav li.active a {
+    background: #643a79;
+}
+
+/* STICKY NAVIGATION BAR*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #25faf3;
+    padding: 1rem 0;
+    box-shadow: 0 0.2rem 0.2rem rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+.sticky .logo{
+    margin-top: 0;
+}
+
+.sticky .main-nav{
+    margin-top: .3rem;
+}
+
+.hero-text-box{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.btn-hero:link,
+.btn-hero:visited{
+    background: #eb7d4b;
+    border-color: #c86a40;
+}
+
+/*MOBILE MENU*/
+.mobile-menu span{
+    color: #fff;
+    font-size: 2.5rem;
+    float: right;
+    margin-top: 2rem;
+    display: none;
+}
+
+.mobile-menu span{
+    cursor: pointer;
+}
+
+.overlay{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s;
+
+}
+
+.overlay-content{
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    
+
+}
+
+.overlay a{
+    text-decoration: none;
+    display: block;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: #999;
+    padding: 1rem 0;
+}
+
+.overlay a:hover{
+    color: #20a290;
+}
+
+.overlay  .closebtn{
+    position: absolute;
+    top: 2rem;
+    right: 4.5rem;
+    font-size: 4rem;
+}
+
+.sticky .mobile-menu span{
+    margin-top: 0;
+    
+}
+
+
+
+/*=========== START SERVICES SECTION================*/
+
+.services-section{
+    color: #fff;
+    text-align: center;
+    background:linear-gradient(rgba(6, 83, 69, 0.8), rgba(93, 21, 21, 0.8)), url(../img/rj.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.services-section h2::after{
+    background: #14a58c;
+}
+
+.services-icon{
+    height: 12rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+
+/*======X=====END SERVICES SECTION=======X======*/
+/*===========START TEAM SECTION================*/
+
+.team-section{
+    text-align: center;
+    background:linear-gradient(rgba(133, 138, 149, 0.787), rgba(119, 144, 195, 0.904)), url(../img/bacgnd.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.team-section h2{
+    color: #3c4761;
+    
+}
+
+.team-section h2::after{
+    background: #c8d9e5;
+}
+ 
+.team-member{
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.team-section h3{
+    color: #27283d;
+}
+
+.role{
+    color: #30bae7;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-top: .5rem;
+    display: inline-block;
+}
+
+.team-section .box p{
+    color: #3c4761;
+}
+
+.social-link{
+    margin-top: 4.5rem;
+}
+
+.social-link ul li{
+    display: inline-block;
+    margin: 0 .5rem;
+}
+
+/*.social-link ul li a:link{
+    color: #fff;
+}*/
+.social-link, .fa, .fab, .fad, .fal, .far, .fas{
+    color: #fff;
+}
+
+.social-link ul li a:link i::before {
+    background: #bdd1df;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: .5s;
+}
+
+.social-link ul li a:hover i::before{
+    background: #393939;
+    transform: rotate(360deg);
+}
+/*======X=====END TEAM SECTION=======X======*/
+/*===========START SKILLS SECTION================*/
+.skill-section{
+    background: #333;
+    color: #3c4761;
+    text-align: center;
+}
+
+.skill-section h2,
+.skill-section h3{
+    color: #3c4761;
+}
+
+.skill-section h2::after{
+    background: #dfe8ed;
+}
+
+.skill-section .box{
+    padding: 4.5rem;
+}
+
+svg.radial-progress circle{
+    stroke-width: 5;
+
+}
+
+svg.radial-progress text{
+    fill: crimson;
+    font-size: 1.5rem;
+}
+
+svg.web-design circle{
+    stroke: #30bae7;
+}
+
+svg.html-css circle{
+    stroke: #fb0065;
+}
+
+svg.graphic-design circle{
+    stroke: #15c77d;
+}
+
+svg.ux-ui circle{
+    stroke: #eb7d4b;
+}
+
+/*=====x======END SKILLS SECTION=======x========*/
+
+/*===========START PORTFOLIO SECTION================*/
+.portfolio-section{
+    background:linear-gradient(rgba(54, 52, 52, 0.561), rgba(228, 225, 220)), url(../img/prt.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.portfolio-section h2{
+    color: #3c4761;
+    
+}
+
+.portfolio-section h2::after{
+    background: #dfe8ed;
+}
+
+.portfolio-filter{
+    margin: 4.5rem 0;
+}
+
+.portfolio-filter button{
+    background: #76a9a9;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    color: #3c4761;
+    margin: 0 .5rem;
+    transition: .5s;
+}
+
+.portfolio-filter button:hover{
+    cursor: pointer;
+    box-shadow: inset 0 .3rem .5rem rgba(60,71,97, 0.5);
+}
+
+.portfolio-image{
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-section .col:nth-child(3){
+    margin-left: 0;
+}
+/*hidden button*/
+/*.portfolio-section .btn-load-more{
+    background: #17c2a4;
+    border-color: #14a58c;
+}*/
+/*hidden button*/
+
+/*======x======START PORTFOLIO SECTION=======x==========*/
+/*===========START TESTIMONIAL SECTION================*/
+
+.testimonial{
+    background:linear-gradient(rgba(66, 129, 148, 0.555), rgba(55,77,66)), url(../img/prt2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.testimonial h2{
+    text-align: center;
+}
+
+.testimonial .title-description{
+    text-align: center;
+    color: #fff;
+}
+
+.testimonial .col:nth-child(3){
+    margin-left: 0;
+}
+
+.testimonial .col:nth-child(1),
+.testimonial .col:nth-child(2){
+    margin-top: 4rem;
+}
+
+
+
+.testimonial .col:nth-child(3),
+.testimonial .col:nth-child(4){
+    margin-top: 8rem;
+}
+
+.client-photo{
+    width: 10rem;
+    float: left;
+
+}
+
+.client-photo img{
+    height: 7rem;
+    border-radius: 50%;
+    margin-top: 3rem;
+}
+
+.client-review{
+    width: 35rem;
+    float: left;
+}
+
+.client-photo p{
+    font-size: 2.1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.client-review{
+    color: #25aff3;
+}
+
+/*======x======START TESTIMONIAL SECTION=======x==========*/
+/*========================================*/
+/* START CONTACT SECTION */
+/*========================================*/
+
+.contact-section{
+    text-align: center;
+    background: #000000ef;
+}
+
+.contact-section h2::after{
+    background: crimson;
+}
+
+.contact-section .title-description{
+    color: #fff;
+
+}
+  
+.contact-section form{
+    margin-top: 5rem;
+    width: 70%;
+    margin-left: 15%;
+   
+
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    background: #000000d5;
+    border: .1rem solid;
+    width: 100%;    
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    margin: .5rem 0;
+    color: #fff;
+    border: none;
+   
+                                                                           
+}
+.contact-section textarea{
+    height: 20rem;
+    
+}
+
+.contact-section form ::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+
+.btn-submit{
+    border: 0;
+    border-bottom: .3 solid #299ec5;
+    background: #30bae7;
+    transition: .5s ease-in-out;
+}
+
+.btn-submit:hover{
+    background: crimson;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*========================================*/
+/* START FOOTER SECTION */
+/*========================================*/
+.footer-section{
+    background: #101010;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: .1rem solid rgba(255, 255, 255, 0.767);
+
+}
+
+.footer-section li{
+    display: inline-block;
+    margin: 0 2rem;
+}
+.footer-section li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+
+.footer-section li a:hover{
+    color: crimson;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
